@@ -1,5 +1,7 @@
-<ng-template [ngIf]="compoundInfo">
-  <div *ngFor="let compound of compoundInfo">
-    <app-card [info]="compound"></app-card>
+<div class="container mt-5" *ngIf="compoundInfo">
+  <div class="row">
+    <div class="col-lg-4 col-md-fix" *ngFor="let compound of compoundInfo">
+      <app-card [info]="compound"></app-card>
+    </div>
   </div>
-</ng-template>
+</div>

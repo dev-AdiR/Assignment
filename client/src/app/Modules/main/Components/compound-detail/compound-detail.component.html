@@ -1,7 +1,14 @@
-<div *ngIf="compoundObservable$ | async as compound">
-  <span>{{ compound.name }}</span>
-  <span>{{ compound.description }}</span>
-  <app-image [src]="compound.imageSource" class="card-image" />
-  <span>{{ compound.description }}</span>
-  <button mat-raised-button color="primary" (click)="openDialog()">Edit</button>
+<div class="container mt-5" *ngIf="compoundObservable$ | async as compound">
+  <div class="row">
+    <div class="col-lg-5">
+      <app-image [src]="compound.imageSource" class="card-image" />
+    </div>
+    <div class="col-lg-7">
+      <h3>{{ compound.name }}</h3>
+      <p>{{ compound.description }}</p>
+      <button class="btn btn-primary" (click)="openDialog()">
+        Edit
+      </button>
+    </div>
+  </div>
 </div>

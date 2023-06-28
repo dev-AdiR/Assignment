@@ -32,7 +32,7 @@ export class CompoundDetailComponent implements OnInit {
 
   openDialog() {
     const dialogRef = this.dialog.open(DialogComponent, {
-      width: '250px',
+      width: '650px',
       data: {
         compoundData: this.compoundObservable$,
         callback: (formValues: Compound) => {

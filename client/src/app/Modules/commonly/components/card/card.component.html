@@ -1,20 +1,12 @@
 <ng-template [ngIf]="info">
-  <div class="cards-row">
-    <div class="card">
-      <app-image [src]="info.imageSource" class="card-image" />
-      <div class="card-title">{{ info.name }}</div>
-      <div class="card-desc">
-        {{ info.description }}
-      </div>
-      <div class="card-actions">
-        <button
-          routerLink="compound/{{info.id}}"
-          type="button"
-          class="card-action-readMore"
-        >
-          Read More
-        </button>
-      </div>
+  <div class="card mt-4">
+    <app-image [src]="info.imageSource" class="card-image" />
+    <div class="card-body">
+      <h5 class="card-title">{{ info.name }}</h5>
+      <p class="card-text cm3_dot">{{ info.description }}</p>
+      <a routerLink="compound/{{ info.id }}" class="btn btn-primary"
+        >Read More</a
+      >
     </div>
   </div>
 </ng-template>
