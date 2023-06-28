@@ -9,9 +9,6 @@ module.exports = app => {
   // Retrieve all compounds
   router.get("/", compounds.findAll);
 
-  // Retrieve all published compounds
-  // router.get("/published", compounds.findAllPublished);
-
   // Retrieve a single compound with id
   router.get("/:id", compounds.findOne);
 
