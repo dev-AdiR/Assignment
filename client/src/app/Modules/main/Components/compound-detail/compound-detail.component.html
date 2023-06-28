@@ -1,0 +1,7 @@
+<div *ngIf="compoundObservable$ | async as compound">
+  <span>{{ compound.name }}</span>
+  <span>{{ compound.description }}</span>
+  <app-image [src]="compound.imageSource" class="card-image" />
+  <span>{{ compound.description }}</span>
+  <button mat-raised-button color="primary" (click)="openDialog()">Edit</button>
+</div>

@@ -1,0 +1,5 @@
+<ng-template [ngIf]="compoundInfo">
+  <div *ngFor="let compound of compoundInfo">
+    <app-card [info]="compound"></app-card>
+  </div>
+</ng-template>

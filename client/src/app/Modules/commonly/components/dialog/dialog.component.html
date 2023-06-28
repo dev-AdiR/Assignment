@@ -1,0 +1,14 @@
+<div *ngIf="data.compoundData | async as compoundInfo">
+  <!-- <input type="text" [value]="compoundInfo.name" /> -->
+  <form [formGroup]="formValidator" (ngSubmit)="onSubmit()">
+    <label for="first-name">First Name: </label>
+    <input id="first-name" type="text" formControlName="name" />
+
+    <app-image [src]="compoundInfo.imageSource" />
+
+    <label for="last-name">Description: </label>
+    <input id="last-name" type="text" formControlName="description" />
+
+    <button mat-raised-button color="primary" type="submit">Edit</button>
+  </form>
+</div>
